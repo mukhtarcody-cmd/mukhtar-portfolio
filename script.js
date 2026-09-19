@@ -43,7 +43,6 @@ document.getElementById('year').textContent = new Date().getFullYear();
 
 const roles = [
   'Senior Software QA Engineer',
-  'QA Team Lead',
   'Fintech Quality Specialist',
   'Arabic & RTL Testing Expert'
 ];
