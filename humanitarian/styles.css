@@ -55,3 +55,9 @@
 
 @media(max-width:980px){.sudan-network{right:0;bottom:-28px}.typing-statement{grid-template-columns:1fr 2px}.typing-statement span{grid-column:1/3}.typing-statement strong{grid-column:1}.typing-statement i{grid-column:2}}
 @media(max-width:650px){.sudan-network{right:-4px;bottom:-80px;width:250px;transform:scale(.86);transform-origin:right bottom}.field-visual{margin-bottom:55px}.sudan-network>svg{height:205px}.typing-statement{min-height:96px}.typing-statement strong{font-size:.97rem}}
+
+/* Refined display typography: generous word rhythm and cleaner readability */
+.hero h1{font-family:"DM Sans",sans-serif;font-weight:700;line-height:1.02;letter-spacing:-.035em;word-spacing:.09em;text-wrap:balance}
+.section-heading h2,.localization-intro h2,.contact h2{font-family:"DM Sans",sans-serif;font-weight:700;line-height:1.06;letter-spacing:-.035em;word-spacing:.075em;text-wrap:balance}
+.lead{font-family:"DM Sans",sans-serif;letter-spacing:-.025em;word-spacing:.055em}
+@media(max-width:650px){.hero h1{font-size:3.05rem;line-height:1.06;letter-spacing:-.025em;word-spacing:.08em}.localization-intro h2,.contact h2{line-height:1.08;letter-spacing:-.025em;word-spacing:.07em}}
