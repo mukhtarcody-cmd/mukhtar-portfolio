@@ -42,3 +42,26 @@ if(localizationTyping&&!matchMedia('(prefers-reduced-motion: reduce)').matches){
   activate(0);
   setTimeout(type,1700);
 }
+
+const expertiseTyping=document.getElementById('expertise-typing');
+const expertiseLines=[
+  'grounded in Sudan.',
+  'centred on communities.',
+  'translated into action.',
+  'built on trusted partnerships.'
+];
+
+if(expertiseTyping&&!matchMedia('(prefers-reduced-motion: reduce)').matches){
+  let line=0,char=expertiseLines[0].length,deleting=true;
+  const typeExpertise=()=>{
+    const phrase=expertiseLines[line];
+    expertiseTyping.textContent=phrase.slice(0,char);
+    if(!deleting&&char<phrase.length){char+=1;setTimeout(typeExpertise,38);return;}
+    if(!deleting&&char===phrase.length){deleting=true;setTimeout(typeExpertise,2100);return;}
+    if(deleting&&char>0){char-=1;setTimeout(typeExpertise,20);return;}
+    line=(line+1)%expertiseLines.length;
+    deleting=false;
+    setTimeout(typeExpertise,300);
+  };
+  setTimeout(typeExpertise,1900);
+}
