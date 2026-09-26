@@ -30,7 +30,7 @@ const localizationLines=[
 
 if(localizationTyping&&!matchMedia('(prefers-reduced-motion: reduce)').matches){
   let line=0,char=localizationLines[0].length,deleting=true;
-  const activate=index=>localizationCards.forEach((card,i)=>card.classList.toggle('is-active',i===index));
+  const activate=index=>localizationCards.forEach(card=>card.classList.toggle('is-active',Number(card.dataset.localizationCard)===index));
   const type=()=>{
     const phrase=localizationLines[line];
     localizationTyping.textContent=phrase.slice(0,char);
